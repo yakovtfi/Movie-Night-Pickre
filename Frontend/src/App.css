@@ -178,6 +178,13 @@
   font-size: 0.9rem;
 }
 
+.conteiner{
+  gap: 16px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
 .seat-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
@@ -192,11 +199,29 @@
   background: #fff;
   cursor: pointer;
 }
+.seat:hover{
+  background-color: #22a02c;
+}
 
 .seat.selected {
-  background: #111827;
-  color: #fff;
+  background: #00ff15;
+  color: #ffffff;
   border-color: #111827;
+}
+
+.seat.selected:hover{
+  background-color: #22a02c;
+}
+
+.seat.taken {
+  background: #ff0000;
+  color: #80706b;
+  border-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.seat.taken:hover{
+  background-color: #b91c1c;
 }
 
 .state-card {

@@ -10,10 +10,10 @@ export const fetchMovies = async () => {
   return response.json()
 }
 
-export const fatchSeats = async()=>{
-    const response = await fetch(`${DEFAULT_API_BASE}/api/seats/:movieId`)
+export const fetchSeats = async (movieId) => {
+  const response = await fetch(`${DEFAULT_API_BASE}/api/seats/${movieId}`)
 
-    if (!response.ok) {
+  if (!response.ok) {
     throw new Error('Unable to load seats right now.')
   }
 

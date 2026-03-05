@@ -28,9 +28,9 @@ const normalizeMovie = (movie) => {
     return {
         id: movie.imdbID || movie.id || movie.Title,
         title: movie.Title || movie.title,
-        year: toNumber(movie.Year ?? movie.year),
-        rating: toNumber(movie.imdbRating ?? movie.rating),
-        runtime: toNumber(movie.Runtime ?? movie.runtime),
+        year: (movie.Year ?? movie.year),
+        rating: (movie.imdbRating ?? movie.rating),
+        runtime: (movie.Runtime ?? movie.runtime),
         genres: normalizeGenres(movie.Genre ?? movie.genres),
         overview: movie.Plot || movie.overview || '',
         posterUrl: movie.Poster || movie.posterUrl || '',
